@@ -1,7 +1,7 @@
 
 		body{
 		    background: linear-gradient(to top, rgb(27, 67, 153),rgb(86, 142, 175));
-			min-height:100dvh;
+			min-height:100vh;
 			height: 100%;
 			font-family: Arial, Cochin, Georgia, Times, 'Times New Roman', serif;
 			color: rgb(255, 255, 255);
@@ -13,7 +13,7 @@
 		   top: 50px;
            text-align: center;
 		   margin: auto;
-	       font-size: 30px;
+	       font-size: 20px;
 		}
         h2{
 		   top: 30px;
@@ -86,8 +86,16 @@
 		}
 
 
-		a:visted{
-           color:white;
+		a:visited{
+           color:rgb(60, 196, 162);
+		}
+
+		footer{
+			text-align: center;
+		}
+
+		.links{
+			padding-top: 60vh;
 		}
 		
 		

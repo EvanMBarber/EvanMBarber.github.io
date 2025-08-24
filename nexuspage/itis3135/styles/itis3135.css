@@ -1,0 +1,50 @@
+body{
+		    background: linear-gradient(to top, rgb(49, 50, 53) 2vh,rgb(13, 14, 15) 60vh);
+			min-height:100vh;
+			height: 100%;
+			font-family: Arial, Cochin, Georgia, Times, 'Times New Roman', serif;
+			color: rgb(255, 255, 255);
+			width: 95%;
+			margin: auto 0;
+            text-align: center;
+            background-attachment: fixed;
+		}
+
+a:hover{
+
+    color:rgb(115, 246, 255)
+}
+
+a:visited{
+    color:rgb(0, 100, 249)
+}
+
+a{
+    color:white;
+}
+
+.about-me{
+    display:flex;
+    justify-content: center;
+}
+
+.about-me ul{
+    text-align: left;
+    display: inline-block;
+    max-width: 70vh;
+}
+
+.my-portrait{
+    width: 40vh;
+}
+
+footer{
+      text-align: center;
+      line-height: 50px;
+}
+
+.contract{
+    text-align: left;
+    display: inline-block;
+    max-width: 70vh;
+}
