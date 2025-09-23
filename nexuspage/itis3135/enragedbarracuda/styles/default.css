@@ -1,0 +1,101 @@
+
+		body{
+		    background: linear-gradient(to top, rgb(27, 67, 153),rgb(86, 142, 175));
+			min-height:100vh;
+			height: 100%;
+			font-family: Arial, Cochin, Georgia, Times, 'Times New Roman', serif;
+			color: rgb(255, 255, 255);
+			width: 95%;
+			margin: auto;
+		}
+		
+		header{
+		   top: 50px;
+           text-align: center;
+		   margin: auto;
+	       font-size: 20px;
+		}
+        h2{
+		   top: 30px;
+		}
+		h3{
+			white-space: nowrap;
+		}
+		h4{
+		   font-size: 20px;
+		}
+		h5{
+           text-align: center;
+		}
+		main{
+		   text-align: left;
+		   margin: auto;
+		   max-width: 1200px;
+		}
+		.text-box{
+			background-color: var(--background-color);
+			padding: 10px;
+			outline: 5px solid;
+			outline-color: var(--color);
+			border-radius: 10px;
+            display: inline-block;
+		}
+        
+
+		.image-container{
+		   display: flex;
+		   justify-content: center;
+	       margin-top: 2vw;
+		   border-radius: 50px;
+		   display: block;
+		   
+		}
+		
+		.hexagon{
+			position: fixed;
+			overflow: hidden;
+			left: var(--shift-left-amount);
+			top: var(--shift-top-amount);
+			width: 100px;
+			height: 100px;
+			background-color: rgb(175, 238, 238);
+			
+			clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+			max-width: 600px;
+			z-index: -1;
+			animation: pulseColor 2s infinite alternate;
+			animation-delay: var(--animation-delay);
+		}
+
+		@keyframes pulseColor {
+			0% { opacity: 0%; } /* Start color */
+			100% { opacity: 60%; } /* Back to original */
+		}
+
+		:root{
+		  --background-color: rgb(32, 68, 97);
+          --color: rgb(25, 134, 161);
+	      --animation-delay: 0;
+          --shift-left-amount: -10px;
+		  --shift-top-amount: -10px;
+
+		}
+        a{
+			color:white;
+
+		}
+
+
+		a:visited{
+           color:rgb(60, 196, 162);
+		}
+
+		footer{
+			text-align: center;
+		}
+
+		.links{
+			padding-top: 60vh;
+		}
+		
+		
