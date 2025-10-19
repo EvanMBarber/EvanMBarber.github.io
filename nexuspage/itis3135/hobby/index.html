@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarGrazers</title>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', monospace;
+      color: white;
+      height: auto;
+      min-height: 500px;
+      background-image: url("images/background2.png");
+      background-size: cover;
+      background-position: absolute;
+    }
+
+    header {
+      display: flex;
+      margin: 0 auto;
+      min-height: 200px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    main {
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    footer {
+      width: 80%;   
+      margin: 0 auto;  
+      text-align: center; 
+    }
+
+    section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .back-panel {
+      background-color: rgb(22, 22, 207);
+      width: 700px;
+      text-wrap: inherit;
+    }
+
+    .back-panel {
+      border: 5px cyan solid;
+    }
+
+    nav {
+      background-color: aquamarine;
+      width: 100%;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 20px 0 20px 0;
+    }
+
+    button {
+      font-family: 'Press Start 2P', monospace;
+      background-color: aqua;
+      border: 5px rgb(0, 30, 151) solid;
+    }
+    button{
+      height: 40px;
+      width: 200px;
+      min-width: 100px;
+    }
+
+    h2 {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      padding: 20px 20px 20px 20px;
+    }
+
+    p {
+      padding: 20px 20px 20px 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background-color: #1884f7;
+      color: #f0f0f0;
+      font-family: 'Verdana', sans-serif;
+      overflow: hidden;
+    }
+
+    table th,
+    table td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    table thead {
+      background-color: #1b0087;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #009dff;
+    }
+
+    table th {
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+
+    #logo {
+      height: auto;
+      width: 600px;
+      image-rendering: pixelated;
+      transform-origin: center;
+      margin: auto;
+    }
+
+    a {
+      color: rgb(255, 128, 0);
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: rgb(255, 128, 0);
+    }
+
+    img {
+      height: auto;
+      width: 200px;
+      image-rendering: pixelated;
+      margin: 0 auto;
+      display: block
+    }
+
+    figure {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      margin: 20px 20px 20px 20px;
+    }
+
+    h3 {
+      display: block;
+      text-align: center;
+      margin: 20px 20px 20px 20px;
+    }
+
+    form {
+      display: block;
+      text-align: center;
+      margin: 20px 20px 20px 20px;
+    }
+
+    #screenshot {
+      height: auto;
+      width: 300px;
+      image-rendering: pixelated;
+      margin: 0 auto;
+      display: block
+    }
+  </style>
+</head>
+
+<body onload="showSection('homepage')">
+  <header>
+    <img id="logo" src="images/logo.png" alt="Star Grazer logo">
+    <nav>
+      <!-- WHAT: Homepage section (explains what the site/game is about) -->
+      <button onclick="showSection('homepage')">Homepage</button> <p>&#x25FC;</p>
+      <!-- WHO: About Us section (who is behind the project) -->
+      <button onclick="showSection('about-us')">About-Us</button> <p>&#x25FC;</p>
+      <!-- WHERE: Community section (where players or fans can gather/interact) -->
+      <button onclick="showSection('community')">Community</button> <p>&#x25FC;</p>
+      <!-- WHEN: Events section (when things happen—updates, showcases, etc.) -->
+      <button onclick="showSection('events')">Events</button> <p>&#x25FC;</p>
+      <!-- HOW: Support section (how users can get help or support the project) -->
+      <button onclick="showSection('contact')">Support</button> <p>&#x25FC;</p>
+      <!-- WHY: About Project section (why the project exists, purpose and vision) -->
+      <button onclick="showSection('about-project')">Project</button> <p>&#x25FC;</p>
+      <!-- EXTRA / CREATIVE: AI Prompts section (behind-the-scenes generation process) -->
+      <button onclick="showSection('ai-prompts')">Ai-Prompts</button> <p>&#x25FC;</p>
+    </nav>
+  </header>
+  <main>
+    <div class='back-panel'>
+      <section id='homepage'>
+        <h2>Welcome to Star Grazer page.</h2>
+        <figure>
+          <img src="images/hero1.png" alt="Player 1 ship">
+        </figure>
+        <p>
+          Welcome to the official development site for Star Grazer,
+          a pixel-based space adventure crafted by strongNebulaForge Studios.
+          Here, we share updates, showcase artwork, and connect with players and creators
+          who are helping shape the universe of Star Grazer. From concept art to
+          community ship designs, every pixel brings us one step closer to launch.
+          Explore the sections below to learn more about our vision, our process,
+          and how you can be part of the Star Grazer community.
+        </p>
+
+        <blockquote>
+          “Every star you graze leaves a trail of destiny.” — NebulaForge Studios
+        </blockquote>
+
+      </section>
+
+      <section id='about-us'>
+        <h2>Who are we?</h2>
+        <p>Star Grazer was created by NebulaForge Studios,
+          a small team of indie developers and digital artists who share a passion
+          for retro-style games and pixel art. Our mission is to bring creativity
+          and community together by providing a space where players and artists
+          can design, showcase, and submit custom pixel ships for use in upcoming
+          space shooter projects.
+
+          What started as a simple idea between friends has grown into a
+          collaborative hub for artists around the world who love turning tiny
+          pixels into massive imagination.</p>
+
+        <h3>Our team of talented developers</h3>
+
+        <figure>
+          <img src="images/dev3.png" alt="Player 1 ship">
+          <figcaption>Markus</figcaption>
+        </figure>
+        <p>
+          Markus is the lead programmer at NebulaForge Studios, where he
+          brings the technical heart of Star Grazer to life. With a strong
+          background in gameplay systems and optimization, Markus specializes in turning
+          creative ideas into smooth, responsive code. He’s passionate about blending old-school
+          game mechanics with modern design practices, drawing inspiration from the 16-bit
+          arcade titles he grew up playing. When he’s not coding late into the night, Markus
+          enjoys experimenting with new game engines and sharing development tips with the
+          indie dev community.
+        </p>
+
+        <figure>
+          <img src="images/dev2.png" alt="Player 1 ship">
+          <figcaption>Jeff</figcaption>
+        </figure>
+
+        <p>
+          Jeff is the sound designer for NebulaForge Studios and the creative
+          force behind every blast, hum, and melody in Star Grazer. With years
+          of experience in digital audio production, he crafts immersive soundscapes that bring
+          each pixelated battle and cosmic journey to life. Inspired by the chiptune tracks and
+          synth-heavy arcade music of the early ’90s, Jeff combines retro tones with modern
+          mixing techniques to give Star Grazer its signature sound. When he’s not composing,
+          he’s usually tinkering with vintage keyboards or sampling everyday noises for his next
+          in-game sound effect.
+        </p>
+
+        <figure>
+          <img src="images/dev1.png" alt="Player 1 ship">
+          <figcaption>Emily</figcaption>
+        </figure>
+
+        <p>
+          Emily is the lead artist at NebulaForge Studios and the visionary
+          behind the distinct look of Star Grazer. Her love for pixel art began
+          with sketching spaceships and characters on graph paper as a kid, which evolved into a
+          full-time passion for digital art and game design. Emily’s attention to color, motion,
+          and atmosphere gives Star Grazer its nostalgic yet vibrant identity. She draws
+          inspiration from classic arcade shooters and early console games, blending that retro
+          energy with modern flair. When she’s not designing new assets, Emily can be found
+          illustrating concept art or mentoring up-and-coming pixel artists in the community.
+        </p>
+
+      </section>
+
+      <section id='community'>
+        <h2>Where to find us.</h2>
+        <p>
+          The Star Grazer community is growing fast, and we’d love for you
+          to be a part of it! Whether you want to share your ship designs, talk game strategy,
+          or get the latest development updates, you can reach us through our official
+          <a href="https://discord.com" target="_blank">Discord server</a> and
+          <a href="https://www.reddit.com" target="_blank">Reddit page</a>.
+          It’s the best way to stay connected with other fans and with the team at NebulaForge Studios.
+        </p>
+
+        <div class="community-links">
+
+          <p>
+            Join our official Discord to chat directly with the developers, share pixel art,
+            and participate in community events.
+          </p>
+          <figure>
+            <a href="https://discord.com" target="_blank" class="btn"><img src="images/discord_logo.png "
+                alt="discord"></a>
+            <figcaption>Discord</figcaption>
+          </figure>
+
+
+
+          <p>
+            Visit our subreddit for development news, ship showcases, and community polls
+            about upcoming features.
+          </p>
+          <figure>
+            <a href="https://www.reddit.com" target="_blank" class="btn"><img src="images/reddit_logo.png"
+                alt="reddit"></a>
+            <figcaption>Reddit</figcaption>
+          </figure>
+
+
+          <p>
+            Subscribe to our monthly newsletter to get the latest updates, developer
+            insights, and sneak peeks at upcoming content.
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+
+      </section>
+
+      <section id='events'>
+        <h2>Upcoming Game Development Events</h2>
+
+        <p>
+          You can meet the NebulaForge Studios team in person at several
+          upcoming events throughout the year! We’ll be attending major game development
+          conventions like GDC, PAX West, and Gamescom to showcase Star Grazer
+          and connect with players and creators. Stop by our booth to chat with the developers,
+          see early gameplay demos, and grab exclusive Star Grazer merchandise —
+          including T-shirts, stickers, and other collectibles. We love meeting fans face-to-face
+          and hearing your ideas for the next big update!
+        </p>
+
+        <table class="event-table">
+          <thead>
+            <tr>
+              <th>Location</th>
+              <th>Event Name</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>San Francisco, USA</td>
+              <td>Game Developers Conference (GDC)</td>
+              <td>March 17–21, 2025</td>
+            </tr>
+            <tr>
+              <td>Cologne, Germany</td>
+              <td>Gamescom</td>
+              <td>August 20–24, 2025</td>
+            </tr>
+            <tr>
+              <td>Seattle, USA</td>
+              <td>PAX West</td>
+              <td>September 5–8, 2025</td>
+            </tr>
+            <tr>
+              <td>Tokyo, Japan</td>
+              <td>Tokyo Game Show</td>
+              <td>September 18–21, 2025</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="map">
+          <h3>GDC Location – San Francisco</h3>
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-122.414%2C37.780%2C-122.400%2C37.790&layer=mapnik&marker=37.785%2C-122.407"
+            style="width:100%; height:400px; border:0;">
+          </iframe>
+          <br />
+          <small>
+            <a href="https://www.openstreetmap.org/?mlat=37.785&mlon=-122.407#map=15/37.785/-122.407">
+              View Larger Map
+            </a>
+          </small>
+        </div>
+
+
+      </section>
+
+      <section id='contact'>
+        <h2>How can you help?</h2>
+        <p>
+          We’re a small team of three dedicated developers working full-time to bring
+          Star Grazer to life. Every day, we pour our passion into
+          designing new ships, coding gameplay systems, and crafting the vibrant pixel
+          universe that defines our game. If you’d like to help us continue building
+          and expanding this project, you can support our development through
+          <a href="https://www.patreon.com" target="_blank">Patreon</a>.
+          Your contributions go directly toward funding art, sound, and development tools
+          — and every bit of support helps us push the game closer to launch.
+        </p>
+        <figure>
+          <a href="https://www.patreon.com" target="_blank" class="btn"><img src="images/patreon_logo.png"
+              alt="Patreon"></a>
+          <figcaption>Patreon</figcaption>
+        </figure>
+
+
+        <p>
+          Developing <strong>Star Grazer</strong> is a full-time passion project for our team at
+          <strong>NebulaForge Studios</strong>. Every contribution helps us continue creating
+          new content, improving gameplay systems, and producing high-quality art, sound,
+          and design. Your support allows us to dedicate more time to development, purchase
+          essential tools, and share exclusive updates with the community. Whether you pledge
+          $1 or $10, every bit of help fuels the stars that power <strong>Star Grazer</strong>!
+        </p>
+
+        <table class="support-table">
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Monthly Pledge</th>
+              <th>Rewards</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cadet</td>
+              <td>$1</td>
+              <td>
+                Access to supporter-only posts and early development news.
+                Your name will be featured on our community thank-you list.
+              </td>
+            </tr>
+            <tr>
+              <td>Commander</td>
+              <td>$5</td>
+              <td>
+                Includes all previous rewards, plus access to early demos and
+                sneak peeks of new ships and environments before public release.
+              </td>
+            </tr>
+            <tr>
+              <td>Admiral</td>
+              <td>$10</td>
+              <td>
+                Includes all previous rewards, plus behind-the-scenes development
+                videos, concept art downloads, and your name in the in-game credits.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id='about-project'>
+        <h2>What are we making?</h2>
+        <p>
+          Star Grazer is a 2D open-world, top-down shooter built in
+          GameMaker Studio 2. Players pilot customizable ships through
+          sprawling galaxies, battling enemies, completing missions, and uncovering
+          secrets hidden across the stars. Our goal is to capture the thrill and
+          challenge of classic arcade shooters while blending them with modern open-world
+          exploration.
+        </p>
+        <p>
+          As developers at NebulaForge Studios, our passion for game
+          creation was born in the arcades of 1994 — the flashing lights, roaring
+          soundtracks, and fast-paced action that defined our childhoods. Star Grazer
+          is our tribute to that golden era of gaming, reimagined for a new generation
+          of players who love both nostalgia and innovation.
+        </p>
+        <figure>
+          <img id="screenshot" src="images/screenshot.png" alt="game screen shot">
+          <figcaption>In game screenshot</figcaption>
+        </figure>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Version</th>
+              <th>Planned Date</th>
+              <th>Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>v0.1 — Prototype Launch</td>
+              <td>December 2025</td>
+              <td>Core movement, shooting mechanics, and first test arena.</td>
+            </tr>
+            <tr>
+              <td>v0.2 — Galaxy Expansion</td>
+              <td>February 2026</td>
+              <td>Introduces two new star systems, NPC traders, and a save/load system.</td>
+            </tr>
+            <tr>
+              <td>v0.3 — Audio & Atmosphere</td>
+              <td>April 2026</td>
+              <td>New soundtrack, sound effects overhaul, and ambient space sounds.</td>
+            </tr>
+            <tr>
+              <td>v0.4 — Combat Evolution</td>
+              <td>July 2026</td>
+              <td>Boss battles, improved enemy AI, and weapon upgrade customization.</td>
+            </tr>
+            <tr>
+              <td>v1.0 — Full Release</td>
+              <td>December 2026</td>
+              <td>Complete story mode, open-world exploration, and official mod support.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id='ai-prompts'>
+        <h2>AI promps CHATGPT basic model (free)</h2>
+        
+        <p>Is there a way to hide and unhide section tags?</p>
+
+<p>How do I only show one section block with JavaScript?</p>
+
+<p>Is there a pixel art font that works across all or most browsers?</p>
+
+<p>What does this warning mean? “Element (section.active) is overqualified, just use .active without element name.”</p>
+
+<p>How do I add fade in and fade out effects upon switching sections?</p>
+
+<p>How do I make a script load when the page loads?</p>
+
+<p>Generate a paragraph for the About Us section, including a developer team name.</p>
+
+<p>Make a welcome paragraph for the homepage belonging to a game development webpage with the game named <em>Star Grazer</em>.</p>
+
+<p>For the About Project portion, make a paragraph detailing what <em>Star Grazer</em> is and explain how we, as developers, were inspired by arcade games back in 1994.</p>
+
+<p>Make a CSS table of four events — first column is location, second is event name, third is date.</p>
+
+<p>How do I make a PNG image grow (scale up)?</p>
+
+<p>How do I make scaling use nearest neighbor?</p>
+
+<p>Write a paragraph about our team of three full-time developers and how people can support us through Patreon.</p>
+
+<p>Make up a bio for a developer named Markus, who is a programmer for this development group.</p>
+
+<p>Now make one about Jeff, who is the sound designer.</p>
+
+<p>Now do one for Emily, who is the artist.</p>
+
+<p>Make a community tab beginning with a paragraph about how to contact us on Discord and Reddit, and include a newsletter fill-out element.</p>
+
+<p>Make a paragraph describing details about meeting us at events and how there are T-shirts and other merchandise available.</p>
+
+<p>What other element is appropriate for this page? Could we implement OpenStreetMap pointing at San Francisco GDC?</p>
+
+<p>For the Support page, make a paragraph encouraging people to support our project and explaining how it helps us, then make a table listing three tiers of support: $1, $5, and $10.</p>
+
+<p>Now make a table with columns named Version, Planned Date, and Features, filling out at least five rows.</p>
+
+
+      </section>
+    
+
+
+    </div>
+  </main>
+  <footer>
+    
+  <p><a href="../barberenterprise.com/index.html"><br>BarberEnterprise</a> ©2025</p>
+
+  </footer>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach((sec) => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
