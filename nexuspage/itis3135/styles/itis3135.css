@@ -102,6 +102,26 @@ table {
     list-style-position: inside;
     text-align: left;
   }
+  
+  fieldset{
+     display: flex;
+     flex-direction: column;
+     max-width: 600px;
+     min-width: 200px;
+     margin: 0 auto;
+  }
+  button{
+    margin: 6px auto;
+   
+  }
+  input{
+    height: 30px;
+    border-radius: 5px;
+  }
+
+  textarea{
+    border-radius: 5px;
+  }
 
 
 
