@@ -11,6 +11,8 @@ function loadImage() {
     document.getElementById('loadImage').innerHTML = `<img src="${imageUrl}" >`;
 }
 
+
+
 //Course Add/Delete and whatever
 document.addEventListener("DOMContentLoaded", () => {
     const addBtn = document.getElementById("add-course");
@@ -73,14 +75,14 @@ formElement.addEventListener("submit", (e) => {
     const quoteAuthor = formElement["quote-author"].value;
 
     const imageInput = formElement.introImage.files[0];
-    const imageUrl = imageInput ? URL.createObjectURL(imageInput) : "images/default.jpg";
+    const imageUrl = imageInput ? URL.createObjectURL(imageInput) : "images/IMG_1511_fixed.jpg";
     const caption = formElement.caption.value;
 
     const statement = formElement["statement"].value;
 
   
     const bullets = [];
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 5; i++) {
         bullets.push(formElement[`bullet${i}`].value);
     }
 
@@ -98,14 +100,7 @@ formElement.addEventListener("submit", (e) => {
     const funny = formElement.funny.value;
     const share = formElement.share.value;
 
-    const link1 = formElement["link1"].value;
-    const link2 = formElement["link2"].value;
-    const link3 = formElement["link3"].value;
-    const link4 = formElement["link4"].value;
-    const link5 = formElement["link5"].value;
-    const link6 = formElement["link6"].value;
-    const link7 = formElement["link7"].value;
-    const link8 = formElement["link8"].value;
+
 
 
     main.innerHTML = ""; // clear the form
@@ -116,24 +111,21 @@ formElement.addEventListener("submit", (e) => {
 <h2>${firstName} ${middleName} ${lastName} ${divider} ${mascotAdj} ${mascot}</h2>
 <figure>
     <img class='my-portrait' src='${imageUrl}' alt="A picture of me">
-    <figcaption>${caption}</figcaption>
+    <figcaption><em>${caption}</em></figcaption>
 </figure>
-    <p>Statement<p>
     <p>${statement}<p>
 
 <div class="about-me">
     <ul>
-        <li><strong>Personal Background:</strong> ${bullets[0]}:</li>
-        <li><strong>Academic Background:</strong> ${bullets[2]}:</li>
-        <li><strong>Professional Background:</strong> ${bullets[1]}:</li>
+        <li><strong>Personal Background: </strong> ${bullets[0]}</li>
+        <li><strong>Academic Background: </strong> ${bullets[1]}</li>
+        <li><strong>Professional Background:</strong> ${bullets[2]}</li>
         <li><strong>Background in this subject:</strong> ${bullets[3]}</li>
-        <li><strong>Career Goals:</strong> ${bullets[4]}</li>
-        <li><strong>Primary Computer Platform:</strong> ${bullets[5]}</li>
-        <li><strong>Courses that I'm taking:</strong></li>
+        <li><strong>Primary Computer Platform:</strong> ${bullets[4]}</li>
         <li>
-            
+            <strong>Courses that I'm taking:</strong><br>
             <ul>
-                ${courses.map((c) => `<li><strong>${c.dept} ${c.num} - ${c.name}:</strong> ${c.reason}</li><br>`).join('')}
+                ${courses.map((c) => `<li><strong>${c.dept} ${c.num} - ${c.name}:</strong> ${c.reason}</li>`).join('')}
             </ul>
         </li>
         ${funny ? `<li><strong>Funny/Interesting Item to Remember me by: </strong> ${funny}</li>` : ""}
@@ -141,27 +133,7 @@ formElement.addEventListener("submit", (e) => {
     </ul>
 </div>
         <p>"${quote}"</p>
-        <p>${quoteAuthor}</p>
-
-        <nav>  
-
-        <a href="${link1}">Github</a> || 
-			
-		<a href="${link2}">Linkedin</a> ||
-
-        <a href="${link3}">Github.io</a> ||
-
-        <a href="${link4}">School Website</a> ||
-
-        <a href="${link5}">Course Homepage</a> ||
-
-        <a href="${link6}">EnragedBarracuda</a> ||
-
-        <a href="${link7}">Crappy Page</a> ||
-
-        <a href="${link8}">Hobby</a> ||
-
-        </nav>
+        <p><em>${quoteAuthor}</em></p>
 
 
 <button id="reset-page">Reset Form</button>

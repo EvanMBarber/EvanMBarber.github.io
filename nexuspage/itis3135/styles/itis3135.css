@@ -106,7 +106,7 @@ table {
   fieldset{
      display: flex;
      flex-direction: column;
-     max-width: 600px;
+     max-width: 900px;
      min-width: 200px;
      margin: 0 auto;
   }
@@ -121,6 +121,10 @@ table {
 
   textarea{
     border-radius: 5px;
+  }
+  .course-entries{
+    display:flex;
+    flex-direction: column;
   }
 
 
