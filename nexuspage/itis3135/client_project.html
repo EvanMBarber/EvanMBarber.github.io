@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Project</title>
+    <link rel = "stylesheet" href="styles/itis3135.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+    <h2>Client Project Overview</h2>
+    <div class="container contract">
+    
+    <p><strong>Purpose:</strong>
+    The goal of this project is to create an interactive learning website that helps students who are new to JavaScript understand core programming concepts through explanations, examples, and hands-on exercises. 
+    The site will provide short tutorials, code snippets, and interactive elements (like quizzes and code examples) to make learning more engaging and self-paced. 
+    The website will serve as a free educational resource designed to help beginners practice basic JavaScript programming concepts without needing external software — everything will run directly in the browser.
+    </p>
+    <p><strong>Intended Users:</strong> Students who are beginning to learn JavaScript, Classmates or peers who want a quick reference or practice resource, 
+        Anyone interested in web development fundamentals</p>
+    <br>
+    <p><strong>Overview of content: </strong></p>
+    <ul>
+        <li>A Home page introducing the site and its learning goals</li>
+        <li>A Lessons page containing short JavaScript tutorials and code examples</li>
+        <li>A Practice page where users can interact with small exercises (quiz or live coding)</li>
+        <li>A Resources page linking to helpful tutorials, docs, and videos</li>
+        <li>A Links page containing links to external resources</li>
+        <li>A Contact page for feedback or questions</li>
+    </ul>
+    <br>
+    <h3>Client Information</h3>
+    <p><strong>Name of the client: </strong>Sam Mathews</p>
+    <p><strong>Organization/Institute/Business the client/s are associated with:</strong> University of North Carolina at Charlotte (STUDENT)</p>
+    <p><strong>Client’s valid email address:</strong> smathe17@charlotte.edu</p>
+    <p><strong>Client’s phone number: </strong>[Private]</p>
+    
+
+   
+    
+    <h3>Site Map</h3>
+    <img src="images/layout.JPG" alt="site map" class="my-portrait">
+    
+    <h3>Layout</h3>
+    <img src="images/sitemap.JPG" alt="layout"  class="my-portrait">
+    
+    
+    
+    
+    <br>
+    <section>
+        <h3>Homepage</h3>
+        <p><strong>Name of Page:</strong> Homepage</p>
+        <p><strong>Purpose:</strong> To introduce visitors to the Learn JavaScript site, explain its purpose, and guide them toward lessons and practice activities.</p>
+        <p><strong>Content:</strong></p>
+        <ul>
+            <li>Site title and tagline (“Learn JavaScript – A Beginner-Friendly Guide”)</li>
+            <li>Brief introduction paragraph</li>
+            <li>“Start Learning” button linking to the Lessons page</li>
+            <li>Overview of what the site offers (Lessons, Practice, Resources)</li>
+            <li>Navigation bar and footer (consistent across site)</li>
+        </ul>
+        <p><strong>Enter Data? (Y/N):</strong> N</p>
+        <p><strong>Data Validation? (Y/N):</strong> N</p>
+        <p><strong>Contain Links? (Y/N):</strong> Y (navigation bar, “Start Learning” button, footer links)</p>
+        <p><strong>Actions?:</strong> Clicking navigation links takes the user to Lessons, Practice, Resources, or Contact pages. “Start Learning” button scrolls smoothly to the Lessons page.</p>
+        <p><strong>Special Notes:</strong> Homepage will include a hero image or simple JavaScript animation in the background (optional visual element).</p>
+    </section>
+    <br>
+    <section>
+        <h3>Homepage → Login Page</h3>
+        <p><strong>Name of Page:</strong> Login Page</p>
+        <p><strong>Purpose:</strong> To provide a simple mock login form allowing users to “log in” before accessing the main learning materials. (Note: No real database or authentication; only front-end simulation.)</p>
+        <p><strong>Content:</strong></p>
+        <ul>
+            <li>Username and Password input fields</li>
+            <li>“Login” and “Clear” buttons</li>
+            <li>Link to “Forgot Password?” (static link for now)</li>
+            <li>Message area for displaying validation or success text</li>
+        </ul>
+        <p><strong>Enter Data? (Y/N):</strong> Y (username, password)</p>
+        <p><strong>Data Validation? (Y/N):</strong> Y (check for empty fields)</p>
+        <p><strong>Contain Links? (Y/N):</strong> Y (to Homepage and optional “Forgot Password?” placeholder)</p>
+        <p><strong>Actions?:</strong> Clicking “Login” triggers JavaScript validation; if fields are not empty, display message like “Welcome, [Username]!” and redirect to Homepage. Clicking “Clear” resets input fields.</p>
+        <p><strong>Special Notes:</strong> This page will simulate authentication entirely on the client side using JavaScript (no data storage).</p>
+    </section>
+    <br>
+    <section>
+        <h3>Homepage → Lessons Page</h3>
+        <p><strong>Name of Page:</strong> Lessons</p>
+        <p><strong>Purpose:</strong> To teach users JavaScript fundamentals using short lessons, code snippets, and “try-it-yourself” examples.</p>
+        <p><strong>Content:</strong></p>
+        <ul>
+            <li>Lesson topics: Variables and Data Types, Functions and Loops, DOM Manipulation</li>
+            <li>Interactive code boxes where users can type and run simple JavaScript commands.</li>
+            <li>Expandable accordion sections using jQuery UI for each topic.</li>
+        </ul>
+        <p><strong>Enter Data? (Y/N):</strong> Y (user types in code examples)</p>
+        <p><strong>Data Validation? (Y/N):</strong> N (no saved input, only browser-run examples)</p>
+        <p><strong>Contain Links? (Y/N):</strong> Y (links to related topics and external tutorials)</p>
+        <p><strong>Actions?:</strong> When user clicks “Run Code,” JavaScript executes the sample code and displays output in a result box. Clicking lesson titles expands/collapses lesson details.</p>
+        <p><strong>Special Notes:</strong> Page will use jQuery accordion and inline JavaScript execution (eval() in sandboxed &lt;iframe&gt;).</p>
+    </section>
+    <br>
+    <section>
+        <h3>Homepage → Practice Page</h3>
+        <p><strong>Name of Page:</strong> Practice</p>
+        <p><strong>Purpose:</strong> To provide simple quizzes and exercises to test users’ understanding of JavaScript concepts.</p>
+        <p><strong>Content:</strong></p>
+        <ul>
+            <li>Multiple-choice quiz questions with “Check Answer” buttons</li>
+            <li>Small code challenges (predict-the-output exercises)</li>
+            <li>Feedback messages (“Correct!” or “Try Again”) displayed dynamically</li>
+        </ul>
+        <p><strong>Enter Data? (Y/N):</strong> Y (selecting answers, typing short code)</p>
+        <p><strong>Data Validation? (Y/N):</strong> Y (ensure a choice is selected before showing feedback)</p>
+        <p><strong>Contain Links? (Y/N):</strong> Y (link to Lessons and Resources pages)</p>
+        <p><strong>Actions?:</strong> Clicking “Check Answer” triggers JavaScript function to display feedback. “Next Question” button loads another quiz item using AJAX.</p>
+        <p><strong>Special Notes:</strong> Will include a small score tracker showing quiz progress using local JavaScript variables (no saved data).</p>
+    </section>
+    <br>
+    <section>
+        <h3>Homepage → Resources Page</h3>
+        <p><strong>Name of Page:</strong> Resources</p>
+        <p><strong>Purpose:</strong> To share additional learning materials such as tutorials, reference sites, and recommended videos for deeper JavaScript study.</p>
+        <p><strong>Content:</strong></p>
+        <ul>
+            <li>Organized list of external links to resources: W3Schools, MDN Web Docs, YouTube Playlist</li>
+            <li>Optional embedded YouTube video explaining JavaScript basics.</li>
+        </ul>
+        <p><strong>Enter Data? (Y/N):</strong> N</p>
+        <p><strong>Data Validation? (Y/N):</strong> N</p>
+        <p><strong>Contain Links? (Y/N):</strong> Y (to external websites and subpage “Links Page”)</p>
+        <p><strong>Actions?:</strong> Clicking links opens resources in new tabs. Clicking internal link navigates to Links Page.</p>
+        <p><strong>Special Notes:</strong> Will include an interactive collapsible list using jQuery UI accordion for organizing resource categories (Docs, Videos, Tools).</p>
+    </section>
+    <br>
+    <section>
+        <h3>Resources → Links Page</h3>
+        <p><strong>Name of Page:</strong> Links Page</p>
+        <p><strong>Purpose:</strong> To list and categorize external JavaScript learning websites in one place.</p>
+        <p><strong>Content:</strong></p>
+        <ul>
+            <li>Categories: Documentation, Tutorials, Practice Platforms</li>
+            <li>Links to MDN, W3Schools, FreeCodeCamp, Codecademy, and others</li>
+            <li>Short descriptions under each link</li>
+        </ul>
+        <p><strong>Enter Data? (Y/N):</strong> N</p>
+        <p><strong>Data Validation? (Y/N):</strong> N</p>
+        <p><strong>Contain Links? (Y/N):</strong> Y (external links)</p>
+        <p><strong>Actions?:</strong> Clicking any link opens the external site in a new browser tab.</p>
+        <p><strong>Special Notes:</strong> This page is linked directly from the Resources page.</p>
+    </section>
+    <br>
+    <section>
+        <h3>Homepage → Contact Page</h3>
+        <p><strong>Name of Page:</strong> Contact</p>
+        <p><strong>Purpose:</strong> To allow visitors to send feedback, ask questions, or suggest topics for future lessons.</p>
+        <p><strong>Content:</strong></p>
+        <ul>
+            <li>Contact form (Name, Email, Message)</li>
+            <li>Submit and Reset buttons</li>
+            <li>Links to GitHub and social media (optional)</li>
+        </ul>
+        <p><strong>Enter Data? (Y/N):</strong> Y</p>
+        <p><strong>Data Validation? (Y/N):</strong> Y (ensure all required fields are filled)</p>
+        <p><strong>Contain Links? (Y/N):</strong> Y (social links, email)</p>
+        <p><strong>Actions?:</strong> When user clicks “Submit,” JavaScript validates fields and opens mailto link or displays confirmation message. Reset button clears form fields.</p>
+        <p><strong>Special Notes:</strong> Form uses JavaScript for validation, but no data is stored (read-only interaction only).</p>
+    </section>
+    </div>
+</main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    
+    <script src="scripts/HTMLInclude.min.js">
+    </script>
+</body>
+</html>

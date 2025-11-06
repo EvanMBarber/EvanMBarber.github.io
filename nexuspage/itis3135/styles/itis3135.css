@@ -23,6 +23,10 @@ a{
     color:white;
 }
 
+h3{
+    text-align: center;
+}
+
 .about-me{
     display:flex;
     justify-content: center;
@@ -126,6 +130,27 @@ table {
     display:flex;
     flex-direction: column;
   }
+  .output{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 800px;
+    gap:40px;
+  }
+
+#json-output, 
+#html-output {
+  white-space: pre;       
+  overflow: auto;         
+  width: 350px;
+  height: 200px;          
+  font-family: monospace;
+  text-align: left;
+  padding: 5px;            
+  box-sizing: border-box;  
+       
+}
+
 
 
 
@@ -156,7 +181,7 @@ table {
 
         }
     
-    }
+}
 
 
 @media screen and ( min-width: 370px ) and ( max-width: 600px ) {
