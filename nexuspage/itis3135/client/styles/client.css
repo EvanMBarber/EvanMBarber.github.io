@@ -1,0 +1,136 @@
+body{
+    background-color:rgb(20, 69, 97);
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    display:block;
+}
+a{
+    color:white;
+}
+nav{
+    background-color: rgb(22, 99, 161);
+    border-bottom: 5px solid rgb(16, 35, 48);
+    border-top: 5px solid rgb(16, 35, 48);
+    min-height: 50px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100%;
+}
+nav a{
+    scale: 1.5;
+    text-decoration: none;
+}
+header{
+    width:100%;
+    margin:0;
+    height: 15vh;
+    min-height: 100px;
+    background-color: rgb(0, 57, 104);
+    min-height:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: flex-start;
+}
+main{
+    width:100%;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    margin: 0 auto;
+    flex-direction: column;
+
+}
+footer{
+  width:100%;
+  margin:0;
+  background-color: rgb(0, 57, 104);
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top: solid 5px rgb(16, 35, 48);   
+}
+
+.container{
+    align-items: center;
+    background-color: rgb(25, 54, 73);
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 800px;
+    border: 5px solid rgb(72, 112, 173);
+    border-radius: 10px;
+}
+
+.center{
+    text-align: center;
+}
+.column{
+    display:flex;
+    flex-direction: column;
+}
+
+.upper-header{
+  display: flex;
+  align-items: center;
+  padding: 0 40px 0 60px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width:100%; 
+  box-sizing: border-box;
+}
+.upper-header a {
+    text-decoration: none;
+}
+h1{
+    scale:1.5;
+}
+
+p{
+    text-align: left;
+}
+
+.login-form {
+    width:50vw;
+    height:30vh;
+}
+
+#username, #password, #email{
+    height: 50px;
+    margin: 20px 5px 20px 5px;
+    align-self: center;
+    width: 70%;
+    font-size: 30px;
+}
+
+#login-submit, #clear, #email-submit{
+    width:60px;
+    align-self: center;
+    background-color: rgb(41, 106, 202);
+    border-radius: 5px;
+    color:aliceblue;
+    margin: 0px 20px;
+    scale: 1.5;
+}
+
+.codebox, textarea{
+    width: 400px;
+    height: 300px;
+}
+
+ul{
+    text-align: left;
+}
+
+.submit-answer{
+    margin: 20px 0px 20px 0px;
+}
+.recource-links{
+    scale:1.5;
+    width:20%;
+    text-align: center;
+}

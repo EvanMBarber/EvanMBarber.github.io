@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice</title>
+  <link rel="stylesheet" href="styles/client.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+         <div class="upper-header">
+         <h1>JSLearner</h1>
+         <a href="login.html" class="login-link">Login</a>
+         </div>
+		<div data-include="components/header.html"></div>
+	</header>
+  <main>
+  <h2>Practice</h2>
+  <!--This score will tick up for each questions you answer right-->
+  <p>0/3 Correct</p>
+  <section class="quiz-question container">
+  <h3>Question:</h3>
+  <p>Which of the following correctly declares a variable that cannot be reassigned in JavaScript? Look carefully at each question below. You have unlimited attempts</p>
+  <p>Related links: <a href="https://www.w3schools.com/js/js_syntax.asp">JavaScript Syntax</a></p>
+  <form>
+    <div>
+      <input type="radio" id="q1a" name="q1" value="1">
+      <label for="q1a">var age = 25;</label>
+    </div>
+    <div>
+      <input type="radio" id="q1b" name="q1" value="2">
+      <label for="q1b">let age = 25;</label>
+    </div>
+    <div>
+      <input type="radio" id="q1c" name="q1" value="3">
+      <label for="q1c">const age = 25;</label>
+    </div>
+    <div>
+      <input type="radio" id="q1d" name="q1" value="4">
+      <label for="q1d">age := 25;</label>
+    </div>
+    <!--A text will eventually pop up if your correct or incorrect-->
+    <button type="button" onclick="checkAnswer()" class="submit-answer">Submit</button>
+  </form>
+  </section>
+
+  <section class="quiz-question container">
+  <h3>Question:</h3>
+  <p>Which of the following is the correct way to define a function in JavaScript that adds two numbers? Look carefully at each question below. You have unlimited attempts</p>
+  <p>Related links: <a href="https://www.w3schools.com/js/js_functions.asp">Functions</a></p>
+  <form>
+    <div>
+      <input type="radio" id="q2a" name="q2" value="1">
+      <label for="q2a">function add(a, b) { return a + b; }</label>
+    </div>
+    <div>
+      <input type="radio" id="q2b" name="q2" value="2">
+      <label for="q2b">add(a, b) => a + b;</label>
+    </div>
+    <div>
+      <input type="radio" id="q2c" name="q2" value="3">
+      <label for="q2c">function add { a + b }</label>
+    </div>
+    <div>
+      <input type="radio" id="q2d" name="q2" value="4">
+      <label for="q2d">let add = a + b;</label>
+    </div>
+
+    <button type="button" onclick="checkAnswer2()" class="submit-answer">Submit</button>
+  </form>
+</section>
+
+<section class="quiz-question container">
+  <h3>Question:</h3>
+  <p>Which of the following JavaScript statements correctly selects an element with the ID "header"? Look carefully at each question below. You have unlimited attempts</p>
+  <p>Related links: <a href="https://www.w3schools.com/js/js_htmldom_elements.asp">DOM Elements</a></p>
+  <form>
+    <div>
+      <input type="radio" id="q3a" name="q3" value="1">
+      <label for="q3a">document.getElementByName("header");</label>
+    </div>
+    <div>
+      <input type="radio" id="q3b" name="q3" value="2">
+      <label for="q3b">document.getElementById("header");</label>
+    </div>
+    <div>
+      <input type="radio" id="q3c" name="q3" value="3">
+      <label for="q3c">document.querySelectorAll("#header");</label>
+    </div>
+    <div>
+      <input type="radio" id="q3d" name="q3" value="4">
+      <label for="q3d">document.getElementsByClassName("header");</label>
+    </div>
+
+    <button type="button" onclick="checkAnswer3()" class="submit-answer">Submit</button>
+  </form>
+</section>
+
+ 
+  </main>
+  <footer>
+
+      <div data-include="components/footer.html"></div>
+    </footer>
+      <script src="scripts/HTMLInclude.min.js">
+  </script>
+</body>
+</html>

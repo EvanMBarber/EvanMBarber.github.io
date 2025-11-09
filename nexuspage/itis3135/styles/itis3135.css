@@ -1,5 +1,5 @@
 body{
-		    background: linear-gradient(to top, rgb(49, 50, 53) 2vh,rgb(13, 14, 15) 60vh);
+		  background: linear-gradient(to top, rgb(49, 50, 53) 2vh,rgb(13, 14, 15) 60vh);
 			min-height:100vh;
 			height: 100%;
 			font-family: Arial, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -100,7 +100,7 @@ table {
   th {
     text-align: left;
   }
- td ul {
+  td ul {
     margin: 0;
     padding-left: 0;
     list-style-position: inside;
