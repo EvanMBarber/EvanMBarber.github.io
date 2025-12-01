@@ -12,20 +12,31 @@
 		<div data-include="components/header.html"></div>
 	</header>
   <main>
+  <div id = "contact-form">
   <h2>Contact us</h2>
 
- <div class="container center column"><p>Please reach out to us if you have any concerns or questions that you would like to ask us.</p>
+ <div class="container center column">
+  <p>Please reach out to us if you have any concerns or questions that you would like to ask us.</p>
   <form class="login-form center column" action="#" method="post">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email ie user@email" required>
+    <label for="reason-menu">Why are you contacting us?:</label>
+    <select id="reason-menu" name="reason-menu">
+    <option >General Question</option>
+    <option >Login Issues</option>
+    <option >Website Troubleshooting</option>
+    <option >Other</option>
+    </select>
+    <textarea id="email-body" required></textarea>
+
+    <label for="email-address">Email:</label>
+    <input type="email" id="email-address" name="email-address" placeholder="Enter your email ie user@email" required>
    
     <div>
-    <button type="submit" id="email-submit">Submit</button>
-    <button type="button" id="clear">Clear</button>
+    <button type="submit" id="contact-submit" onclick="contactSubmit()">Submit</button>
+    <button type="button" id="contact-clear" onclick="contactClear()">Clear</button>
    </div>
   </form>
 </div>
- 
+ </div>
   </main>
   <footer>
 
@@ -33,5 +44,6 @@
     </footer>
       <script src="scripts/HTMLInclude.min.js">
   </script>
+   <script src="scripts/client.js"></script>
 </body>
 </html>

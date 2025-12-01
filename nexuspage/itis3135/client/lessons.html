@@ -19,7 +19,8 @@
   <h2>Lessons</h2>
   <section class="lesson container center">
     <!--When you click on the h3 element, these boxes will expand and reveal their content, right now they are expanded by defualt-->
-    <h3>Variables and Data Types</h3>
+    <h3 class = "lesson-header" onclick = "toggleView('content-box1')">Variables and Data Types</h3>
+    <div id = 'content-box1'>
     <p>Learn how to store, update, and work with data using JavaScript variables, strings, numbers, and booleans.</p>
     <p>In JavaScript, variables are used to store and manage data that your program can use and modify. You can declare variables using let, const, or var — though modern JavaScript mainly uses let (for values that can change) and const (for values that stay constant). For example,</p>
     <ul>
@@ -31,26 +32,51 @@
         <li><strong>Symbol</strong> – a unique identifier, often used for special object properties.</li>
         <li><strong>BigInt</strong> – used for very large integers beyond the normal numeric limit.</li>
     </ul>
-    <div class="code-box">
-      <textarea id="code1" placeholder="Type your JavaScript code here...">let name = "JSLearner";\nconsole.log(name);</textarea>
-      <button onclick="runCode('code1', 'output1')">Run</button>
-      <pre id="output1" class="output"></pre>
-    </div>
-  </section>
+    <div class="code-box column">
+  <textarea id="code1" placeholder="Type JS here...">let name = "Alan"
 
+let age = "25"
+
+
+
+if(age > 18){
+  console.log("I'm " + name + " and I am an adult")
+}
+else{
+
+ console.log("I'm " + name + " and I am NOT an adult")
+}</textarea>
+  <!--This is the only way I could find to have a pseudo IDE and run the code, but accumulus doesn't like it-->
+  <iframe id="sandbox1" sandbox="allow-scripts allow-same-origin"></iframe>
+
+  <button onclick="runCode('code1', 'sandbox1')">Run</button>
+</div>
+  </div>
+  </section>
+  
   <section class="lesson container center">
-    <h3>Functions and Loops</h3>
+    <h3 class = "lesson-header" onclick = "toggleView('content-box2')">Functions and Loops</h3>
+    <div id = 'content-box2'>
     <p>Understand how to make your code dynamic with functions and repetitive with loops.</p>
     <p>A function is a reusable block of code that performs a specific task. You define a function using the function keyword or newer syntax like arrow functions (=>). Functions make code cleaner and easier to manage by avoiding repetition. You can pass values to functions as parameters and return results using the return statement.</p>
-    <div class="code-box">
-      <textarea id="code2" placeholder="Type your JavaScript code here...">for (let i = 1; i <= 5; i++) {\n  console.log(i);\n}</textarea>
-      <button onclick="runCode('code2', 'output2')">Run</button>
-      <pre id="output2" class="output"></pre>
-    </div>
+    <div class="code-box column">
+  <textarea id="code2" placeholder="Type JS here...">let name = "Alan"
+
+for(let i = 1; i <= 3; i++){
+
+console.log(i)
+}</textarea>
+  <!--This is the only way I could find to have a pseudo IDE and run the code, but accumulus doesn't like it-->
+  <iframe id="sandbox2" sandbox="allow-scripts allow-same-origin"></iframe>
+
+  <button onclick="runCode('code2', 'sandbox2')">Run</button>
+</div>
+  </div>
   </section>
 
   <section class="lesson container center">
-    <h3>DOM Manipulation</h3>
+    <h3 class="lesson-header" onclick = "toggleView('content-box3')">DOM Manipulation</h3>
+    <div id = 'content-box3'>
     <p>Discover how JavaScript can dynamically change the content and style of web pages through the DOM.</p>
     <p>
   The Document Object Model (DOM) is how JavaScript interacts with the structure of a web page.
@@ -59,11 +85,41 @@
   becomes a node in this tree. JavaScript can use the DOM to read, modify, add, or remove elements
   dynamically, allowing you to make your pages interactive and responsive.
 </p>
-    <div class="code-box">
-      <textarea id="code3" placeholder="Type your JavaScript code here...">document.body.style.background = 'lightyellow';</textarea>
-      <button onclick="runCode('code3', 'output3')">Run</button>
-      <pre id="output3" class="output"></pre>
-    </div>
+  <div class="code-box column">
+  <textarea id="code3" placeholder="Type JS here...">let name = "Alan"
+
+//Since this IDE only handles JS, you won't see the full effects of DOM functions as they are used to alter HTML properties
+
+const box = document.getElementById("box");
+box.style.background = "lightblue";
+
+
+// ---- querySelector ----
+
+// Selects the FIRST element that matches the CSS selector
+
+const firstMessage = document.querySelector(".message");
+firstMessage.style.color = "red";
+
+
+// ---- querySelectorAll ----
+
+// Selects ALL matching elements (returns a NodeList)
+
+const allMessages = document.querySelectorAll(".message");
+
+allMessages.forEach((msg, index) => {
+    msg.textContent = `Message #${index + 1}`;
+});
+
+
+</textarea>
+  <!--This is the only way I could find to have a pseudo IDE and run the code, but accumulus doesn't like it-->
+  <iframe id="sandbox3" sandbox="allow-scripts allow-same-origin"></iframe>
+
+  <button onclick="runCode('code3', 'sandbox3')">Run</button>
+</div>
+  </div> 
   </section>
  
   </main>
@@ -71,7 +127,7 @@
 
       <div data-include="components/footer.html"></div>
     </footer>
-      <script src="scripts/HTMLInclude.min.js">
-  </script>
+      <script src="scripts/HTMLInclude.min.js"></script>
+      <script src="scripts/client.js"></script>
 </body>
 </html>

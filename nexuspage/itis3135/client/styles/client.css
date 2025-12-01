@@ -56,17 +56,21 @@ footer{
   border-top: solid 5px rgb(16, 35, 48);   
 }
 
-.container{
-    align-items: center;
+.container {
     background-color: rgb(25, 54, 73);
     margin: 20px auto;
-    padding: 10px;
+    padding: 20px;
     max-width: 800px;
     border: 5px solid rgb(72, 112, 173);
     border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-width:300px
 }
 
 .center{
+    align-items: center;
     text-align: center;
 }
 .column{
@@ -95,11 +99,15 @@ p{
 }
 
 .login-form {
-    width:50vw;
-    height:30vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;      
 }
 
-#username, #password, #email{
+
+#username, #password, #email, #reason-menu, #email-address{
     height: 50px;
     margin: 20px 5px 20px 5px;
     align-self: center;
@@ -107,7 +115,7 @@ p{
     font-size: 30px;
 }
 
-#login-submit, #clear, #email-submit{
+#login-submit, #clear, #email-submit, #clear-email{
     width:60px;
     align-self: center;
     background-color: rgb(41, 106, 202);
@@ -118,14 +126,16 @@ p{
 }
 
 .codebox, textarea{
-    width: 400px;
+    width: 672px;
+    max-width: 672px;
     height: 300px;
+    box-sizing: border-box;
+    margin:20px 0px 20px 0px;
 }
 
 ul{
     text-align: left;
 }
-
 .submit-answer{
     margin: 20px 0px 20px 0px;
 }
@@ -133,4 +143,23 @@ ul{
     scale:1.5;
     width:20%;
     text-align: center;
+}
+#forgot-password, #create-new-account, #back-to-login{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+iframe{
+    background-color: rgb(44, 44, 44);
+    border: 5px rgb(0, 71, 112) solid;
+}
+
+
+#content-box1, #content-box2,#content-box3{
+    display: none;
+}
+
+.lesson-header:hover{
+   color: rgb(0, 162, 255);
+
 }

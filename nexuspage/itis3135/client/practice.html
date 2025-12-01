@@ -18,7 +18,7 @@
   <main>
   <h2>Practice</h2>
   <!--This score will tick up for each questions you answer right-->
-  <p>0/3 Correct</p>
+  <p id = 'total-score'>0/3 Correct</p>
   <section class="quiz-question container">
   <h3>Question:</h3>
   <p>Which of the following correctly declares a variable that cannot be reassigned in JavaScript? Look carefully at each question below. You have unlimited attempts</p>
@@ -41,7 +41,8 @@
       <label for="q1d">age := 25;</label>
     </div>
     <!--A text will eventually pop up if your correct or incorrect-->
-    <button type="button" onclick="checkAnswer()" class="submit-answer">Submit</button>
+    <button type="button" onclick="checkAnswer1()" class="submit-answer">Submit</button>
+    <p id="q1-result" style="margin-top: 10px;"></p>
   </form>
   </section>
 
@@ -68,6 +69,7 @@
     </div>
 
     <button type="button" onclick="checkAnswer2()" class="submit-answer">Submit</button>
+    <p id="q2-result" style="margin-top: 10px;"></p>
   </form>
 </section>
 
@@ -94,6 +96,7 @@
     </div>
 
     <button type="button" onclick="checkAnswer3()" class="submit-answer">Submit</button>
+    <p id="q3-result" style="margin-top: 10px;"></p>
   </form>
 </section>
 
@@ -105,5 +108,6 @@
     </footer>
       <script src="scripts/HTMLInclude.min.js">
   </script>
+   <script src="scripts/client.js"></script>
 </body>
 </html>

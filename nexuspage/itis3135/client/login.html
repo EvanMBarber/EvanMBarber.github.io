@@ -11,7 +11,7 @@
     <header>
 		<div data-include="components/header.html"></div>
 	</header>
-  <main>
+  <main id="login-panel">
   <h2>Login</h2>
 
  <div class="container center column">
@@ -23,13 +23,13 @@
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" placeholder="Enter your password" required>
    <div>
-    <button type="submit" id="login-submit">Login</button>
-    <button type="button" id="clear">Clear</button>
+    <button type="submit" id="login-submit" onclick="login()">Login</button>
+    <button type="button" id="clear" onclick="clearFields()">Clear</button>
    </div>
   </form>
   <!--These will change the login page form box into a create account and password recovery form-->
-  <p>I forgot password</p>
-  <p>Create new account</p>
+  <p id="forgot-password" onclick="forgotPassword()">I forgot password</p>
+  <p id="create-new-account" onclick="creatNewAccount()">Create new account</p>
 </div>
  
   </main>
@@ -39,5 +39,6 @@
     </footer>
       <script src="scripts/HTMLInclude.min.js">
   </script>
+      <script src="scripts/client.js"></script>
 </body>
 </html>
